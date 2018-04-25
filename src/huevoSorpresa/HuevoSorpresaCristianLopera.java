@@ -1,4 +1,8 @@
 package huevoSorpresa;
+/**
+ * 
+ * @author Cristian_Lopera_Sanchez
+ */
 public class HuevoSorpresaCristianLopera {
     private int unidades;//número de huevos que quedan 
     private double precio;//precio actual de un huevo sorpresa
@@ -6,56 +10,56 @@ public class HuevoSorpresaCristianLopera {
     private double precio_max;//precio máximo que puede tener un huevo sorpresa
     
      /**
-     * @return the unidades
+     * @return Devuelve el atributon unidades
      */
     public int getUnidades() {
         return unidades;
     }
 
     /**
-     * @param unidades the unidades to set
+     * @param unidades el set de unidades
      */
     public void setUnidades(int unidades) {
         this.unidades = unidades;
     }
 
     /**
-     * @return the precio
+     * @return Devuelve el atributo precio
      */
     public double getPrecio() {
         return precio;
     }
 
     /**
-     * @param precio the precio to set
+     * @param precio el set de precio.
      */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
     /**
-     * @return the sorpresa
+     * @return Devuelve el atributo sorpresa.
      */
     public String getSorpresa() {
         return sorpresa;
     }
 
     /**
-     * @param sorpresa the sorpresa to set
+     * @param sorpresa el set de sorpresa.
      */
     public void setSorpresa(String sorpresa) {
         this.sorpresa = sorpresa;
     }
 
     /**
-     * @return the precio_max
+     * @return Devuelve el precio máximo
      */
     public double getPrecio_max() {
         return precio_max;
     }
 
     /**
-     * @param precio_max the precio_max to set
+     * @param precio_max el set de precio_max
      */
     public void setPrecio_max(double precio_max) {
         this.precio_max = precio_max;
@@ -88,6 +92,13 @@ public void modificarUnidades(int unidades){this.setUnidades(unidades);}
 
 /*Método que permite sacar huevos sopresa si se tiene suficiente dinero y hay 
 suficientes huevos sorpresas, este método se probará con JUnit*/
+/**
+ * 
+ * @param unidades Son las unidades de huevos disponibles.
+ * @param dinero Es el dinero del comprador
+ * @param sorpresa Es el nuevo parámetro introducido.
+ * @throws Exception Es la excepción que salta si ocurre algún error.
+ */
 public void sacarHuevosSorpresas(int unidades, double dinero, String sorpresa) throws Exception{
    if (dinero <= 0) {
    	throw new Exception("Se necesita una cantidad de dinero positiva");
@@ -107,6 +118,11 @@ public void sacarHuevosSorpresas(int unidades, double dinero, String sorpresa) t
 
 /*Método que permite aumentar el precio de venta de un huevo sorpresa, suma al precio actual el aumento 
 que se indica siempre que no se sobrepase el precio máximo de venta, este método se probará con JUnit*/
+/**
+ * 
+ * @param aumento Es el aumento que se aplicará.
+ * @throws Exception Es la excepción que salta si ocurre algún error.
+ */
 public void aumentarPrecio(double aumento) throws Exception{
     if(aumento <= 0) {
         throw new Exception("El aumento debe ser positivo");
